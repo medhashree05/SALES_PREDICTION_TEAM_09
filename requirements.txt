@@ -1,0 +1,5 @@
+install.packages("forecast")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("TTR")
+install.packages("Matrix")
