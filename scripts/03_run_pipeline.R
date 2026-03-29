@@ -1,8 +1,8 @@
-source('data_trend_pred.R')
+source('scripts/01_model_stl_ets.R')
 
-train <- getdata("product_distribution_training_set.txt")
+train <- getdata("data/data_files/product_distribution_training_set.txt")
 
-key_id <- get_key_id("key_production_IDs.txt")
+key_id <- get_key_id("data/data_files/key_production_IDs.txt")
 
 result <- matrix(NA, nrow=28, ncol=101)
 
@@ -21,4 +21,4 @@ for(i in c(1:10)){
 }
 
 output <- get_final(result, key_id, nrow=101, ncol=29)
-write.table(output, "output.txt", row.names=FALSE, col.names=FALSE)
+write.table(output, "results/tables/output.txt", row.names=FALSE, col.names=FALSE)
