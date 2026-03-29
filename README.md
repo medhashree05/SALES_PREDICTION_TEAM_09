@@ -189,4 +189,4 @@ This project demonstrates the application of time-series forecasting using STL a
 ## Repository Information
 
 * **Repository Name:** SALES_PREDICTION_TEAM_09
-* **GitHub Link:** GITHUB_LINK
+* **GitHub Link:** (https://github.com/medhashree05/SALES_PREDICTION_TEAM_09)
