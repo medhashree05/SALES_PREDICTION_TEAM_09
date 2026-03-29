@@ -1,21 +1,127 @@
-# Time-Series-Forecasting
+SALES TIME SERIES FORECASTING USING STL AND ETS
 
-Description:
-- A sales data of 118 days has been provided for 100 key product ids. The goal of this project is to predict next 28 days sales of 100 key product ids. After studying the data, it was found that the data had no seasonality. So I came to the conclusion of using Seasonal Decomposition of Time Series by Loess model and Error Trend Seasonal (ETS) method. 
-- This repository contains data files provided, run.R and data_trend_pred.R 
-- run.R has step by step function calls for execution
-- data_trend_pred.R contains the functions performing reading and writing of data and forecast function.
+Team Members
+N Medhashree - 2023BCS0042
+Sejal Satheesh - 2023BCS0048
+Amal Byju Dev - 2023BCS0156
+Ayesha Linta - 2023BCS0186
 
-Requirement:
-- Download R studio (https://cran.r-project.org/bin/windows/base/)
-- forecast library v7.0
+Problem Statement
+The objective of this project is to forecast future sales for 100 key product IDs using historical sales data of 118 days. Accurate forecasting is important for effective inventory management, demand planning, and business decision-making. The goal is to predict sales for the next 28 days for each product.
 
-Installation:
-- Install the R studio from the link provided.
-- Install the forecast library from package installer found in R studio. 
+Objectives
+The main objectives of this project are:
+To analyze time series sales data for multiple products
+To identify patterns such as trend and seasonality in the data
+To apply suitable forecasting techniques to predict future sales
+To generate predictions for the next 28 days for each product
+To produce a structured output containing all predictions
 
-Usage:
-- Open the R studio change the working directory where all the R files and data files are present.
-- Run the run.R in R studio by including the file using source("run.R") command.
-- This will run the run.R file by step by step executing all the commands present in the file.
-- Finally it will write the output in output.txt file and store in the working directory.
+
+
+Dataset
+Source of Dataset:
+The dataset is provided as part of the project files.
+Number of Observations:
+118 days of sales data
+Number of Variables:
+101 columns
+1 column representing aggregated or processed data
+100 columns representing individual product sales
+Description of Important Attributes:
+Each column represents the sales of a particular product over time
+Each row represents daily sales values
+A separate file contains the key product IDs
+The dataset is structured for time series forecasting
+
+Methodology
+Data Preprocessing
+The dataset is loaded using a custom function. The data is transposed to make it easier to process each product individually. A new column is created to store total daily sales by summing across products. The data is then structured into a format suitable for time series analysis.
+
+Exploratory Data Analysis
+Basic exploratory analysis is performed using time series plots. Visualization techniques such as standard plots, seasonal plots, and month-wise plots are used to understand patterns in the data. It was observed that the dataset does not show strong seasonal patterns but contains noticeable trends.
+
+
+
+
+Models Used
+STL (Seasonal and Trend Decomposition using Loess):
+STL is used to decompose the time series into trend and seasonal components. This helps in understanding the underlying structure of the data.
+ETS (Error, Trend, Seasonal Model):
+The ETS model is used for forecasting future values. It works well for time series data with trend components and is applied after decomposition.
+Holt-Winters Model:
+An additional smoothing-based model is used to further improve forecasting accuracy by handling trends effectively.
+
+Forecasting Process
+Each product’s sales data is processed individually. A loop is used to iterate through all product columns. For each product, the time series is created, decomposed, and forecasted for the next 28 days. The predicted values are stored in a result matrix.
+
+Evaluation Method
+The model performance is evaluated by checking:
+Consistency of predicted trends
+Absence of negative forecast values
+Smoothness and realism of predicted outputs
+
+Results
+The model successfully generated forecasts for all products. Each product has 28 predicted future values. The results are stored in a structured output file. The predictions follow the general trend of historical data and do not produce unrealistic values.
+
+
+
+Key Visualizations
+The following visualizations are used in the project:
+
+Figure 1: STL decomposition showing data, trend, seasonal, and remainder components.
+Explanation:
+This plot decomposes the time series into its components using STL. The trend shows the overall direction of sales, the seasonal component shows repeating patterns, and the remainder represents random noise in the data.
+
+Figure 2: Month plot illustrating seasonal variations across time periods.
+
+Explanation:
+This plot compares values across different cycles to identify seasonal patterns. It helps in understanding whether the data follows any repeating behavior over time.
+
+
+
+Figure 3: Season plot comparing patterns across different time cycles.
+Explanation:
+The season plot displays multiple cycles of the time series, allowing comparison between different periods. Each line represents a cycle, helping identify consistency or variation in patterns.
+
+Figure 4: Forecasted values for the next 28 days with confidence intervals.
+Explanation:
+This plot shows the predicted future values based on historical data. The shaded region represents confidence intervals, indicating the uncertainty in the forecast.
+
+How to Run the Project
+Steps to Execute:
+Install R or RStudio
+Install the required package: forecast
+Set the working directory to the project folder
+Run the main script file
+The output file will be generated automatically
+
+Folder Organization
+The project folder contains the following files:
+Main script file for execution
+File containing forecasting functions
+Dataset file containing sales data
+File containing product IDs
+Output file containing prediction
+Conclusion
+The project demonstrates the application of time series forecasting techniques on sales data. STL decomposition helps in extracting the trend component, while the ETS model provides accurate future predictions. The approach is effective for datasets with limited or weak seasonality. The generated forecasts can be used for demand planning and business decision-making.
+
+Contribution
+N Medhashree - Data preprocessing, data transformation, feature engineering, and initial exploratory data analysis (EDA) including time series visualization and seasonal pattern analysis and documentation ( dataset description).
+
+Sejal Satheesh – Development of Model-1 using STL decomposition and ETS forecasting, including data transformation (log scaling), model implementation, and generation of 28-day predictions., and documentation (README).
+
+Amal Byju Dev - Visualization, results generation, and report writing including creation of plots (STL decomposition, seasonal plots, forecast plots), tables (model summary, statistical summary).
+
+Ayesha Lintha - Development of Model-2 using ARIMA, model comparison, integration of scripts into a unified pipeline, and output generation for final predictions and documentation (ppt).
+References
+R Forecast Package Documentation
+Hyndman, R.J. – Forecasting Methods
+CRAN R Project Website
+Course materials and lecture notes
+Repository Information
+Repository Name: SALES_PREDICTION_TEAM_09
+GitHub Link: GITHUB_LINK
+
+
+
