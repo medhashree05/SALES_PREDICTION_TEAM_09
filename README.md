@@ -102,7 +102,7 @@ Main script file for execution
 File containing forecasting functions
 Dataset file containing sales data
 File containing product IDs
-Output file containing prediction
+Output file containing predictions
 Conclusion
 The project demonstrates the application of time series forecasting techniques on sales data. STL decomposition helps in extracting the trend component, while the ETS model provides accurate future predictions. The approach is effective for datasets with limited or weak seasonality. The generated forecasts can be used for demand planning and business decision-making.
 
@@ -122,6 +122,4 @@ Course materials and lecture notes
 Repository Information
 Repository Name: SALES_PREDICTION_TEAM_09
 GitHub Link: GITHUB_LINK
-
-
 
