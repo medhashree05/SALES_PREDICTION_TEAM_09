@@ -112,20 +112,22 @@ The model successfully generated forecasts for all products. Each product has 28
 ### Figure 1: STL Decomposition
 
 Shows trend, seasonal, and residual components.
-![alt text](results/figures/forecast_plot_01.png)
+![alt text](results/figures/stl_decomposition_01.png)
 
 ### Figure 2: Month Plot
 
 Illustrates seasonal variations across time.
+![alt text](results/figures/time_series_plot_01.png)
 
 ### Figure 3: Seasonal Plot
 
 Compares patterns across cycles.
+![alt text](results/figures/seasonal_plot_01.png)
 
 ### Figure 4: Forecast Plot
 
 Displays predicted values with confidence intervals.
-
+![alt text](results/figures/forecast_plot_01.png)
 ---
 ## Results Tables
 
